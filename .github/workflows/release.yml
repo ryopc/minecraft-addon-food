@@ -1,0 +1,54 @@
+name: Manual Build and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'リリースするバージョンを指定（例: 1.0.1）'
+        required: true
+        default: '1.0.1'
+        type: string
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # 1. ソースコードのチェックアウト
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. build.sh の実行
+      - name: Run build script
+        run: |
+          chmod +x ./build.sh
+          bash ./build.sh
+
+      # 3. 入力されたバージョンの整形（頭に v がなければ付ける）
+      - name: Format Version Tag
+        id: format_version
+        run: |
+          INPUT_VERSION="${{ github.event.inputs.version }}"
+          # 頭に v が付いていなければ付与する
+          if [[ $INPUT_VERSION =~ ^v ]]; then
+            TAG_NAME="$INPUT_VERSION"
+          else
+            TAG_NAME="v$INPUT_VERSION"
+          fi
+          echo "tag=$TAG_NAME" >> $GITHUB_OUTPUT
+
+      # 4. 指定されたバージョンで GitHub Release を作成
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.format_version.outputs.tag }}
+          name: Release ${{ steps.format_version.outputs.tag }}
+          body: |
+            Manual release by GitHub Actions.
+            - Version: ${{ steps.format_version.outputs.tag }}
+          draft: false
+          prerelease: false
