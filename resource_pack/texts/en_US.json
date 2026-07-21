@@ -1,5 +1,5 @@
 {
-  "item.food.potato_food": "Fried Potato",
-  "item.food.hamburger_food": "Hamburger",
-  "item.food.juice_food": "Juice"
+  "item.food:fried_potato_food": "Fried Potato",
+  "item.food:hamburger_food": "Hamburger",
+  "item.food:juice_food": "Juice"
 }
