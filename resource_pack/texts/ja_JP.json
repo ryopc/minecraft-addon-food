@@ -1,3 +1,5 @@
-item.food:fried_potato_food=フライドポテト
-item.food:hamburger_food=ハンバーガー
-item.food:juice_food=ジュース
+{
+  "item.food:fried_potato_food": "フライドポテト",
+  "item.food:hamburger_food": "ハンバーガー",
+  "item.food:juice_food": "ジュース"
+}
