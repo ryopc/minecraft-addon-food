@@ -2,13 +2,13 @@
   "resource_pack_name": "Food Addon",
   "texture_name": "atlas.items",
   "texture_data": {
-    "potato": {
+    "food:fried_potato_food": {
       "textures": "textures/items/potato"
     },
-    "hamburger": {
+    "food:hamburger_food": {
       "textures": "textures/items/hamburger"
     },
-    "juice": {
+    "food:juice_food": {
       "textures": "textures/items/juice"
     }
   }
