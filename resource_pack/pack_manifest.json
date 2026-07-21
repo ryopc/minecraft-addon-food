@@ -4,7 +4,7 @@
     "description": "Textures for Food Addon - RyoPC",
     "name": "§6Food Addon - RyoPC",
     "uuid": "f6a7b8c9-d0e1-4f23-8a01-2b3c4d5e6f70",
-    "version":,
+    "version":[1, 0, 0],
     "min_engine_version": [1, 21, 0]
   },
   "modules": [
