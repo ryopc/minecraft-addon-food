@@ -1,0 +1,23 @@
+{
+  "format_version": 18,
+  "header": {
+    "description": "Food Addon - Resource Pack",
+    "name": "Food Addon - Resource Pack",
+    "uuid": "e5f6a7b8-c9d0-4e12-8f01-2a3b4c5d6e7f",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "f6a7b8c9-d0e1-4f23-8a01-2b3c4d5e6f70",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "c3d4e5f6-a7b8-4c90-9d0e-1f2a3b4c5d6e",
+      "version": [1, 0, 0]
+    }
+  ]
+}

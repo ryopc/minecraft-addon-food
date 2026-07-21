@@ -1,0 +1,15 @@
+{
+  "resource_pack_name": "Food Addon",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "potato": {
+      "textures": "textures/items/potato"
+    },
+    "hamburger": {
+      "textures": "textures/items/hamburger"
+    },
+    "juice": {
+      "textures": "textures/items/juice"
+    }
+  }
+}
